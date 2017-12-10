@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Iris</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            margin: 10px;
+            white-space: nowrap;
+        }
+
+        .success {
+        	color: #009a61;
+        }
+
+		.fault {
+			color: #ff3614;
+		}
+
+        #newsNumber {
+            width: 80%;
+        }
+
+        #iris {
+            width: 15%;
+        }
+
+        h1 {
+        	font-size: 15px;
+      	}
+
+	    #container {
+	        align-items: center;
+	        display: flex;
+	        justify-content: space-between;
+	    }
+
+	    a {
+	    	text-decoration: none
+	    }
+    </style>
+
+</head>
+<body>
+	<div id="container">
+		<h1>鸢尾</h1>
+		<p>一个由 <a href="https://www.flyce.cn/" target="_blank">Echo</a> 开发的Chrome扩展，目的在于偷懒。</p>
+	</div>
+    <input id="newsNumber" placeholder="输入你想读取的新闻条数，默认为15" autofocus type="number" />
+	<button id="iris">Start</button>
+	<div id="progress"></div>
+	<script src="Iris.js"></script>
+</body>
+</html>

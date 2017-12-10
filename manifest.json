@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "鸢尾",
+  "description": "鸢尾计划，帮你自动点击OA公文！",
+  "version": "0.0.1",
+  "author": "Wang Quanfeng (Echo)",
+  "homepage_url": "https://www.flyce.cn/",
+
+  "browser_action": {
+    "default_icon": "Iris.png",
+    "default_popup": "iris.html",
+    "default_title": "鸢尾⚜️"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*.rlair.net/"
+  ],
+  "offline_enabled": false
+}
