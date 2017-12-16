@@ -10,7 +10,7 @@ Open your browser, enter `chrome://extensions/` in the address bar
 
 Enable developer mode, load the unzipped extension, select the folder you just downloaded
 
-### for other browser
+### For other browser
 (click here)[https://github.com/flyce/Iris/raw/master/Iris.crx] download Iris.crx
 
 Drag the file you just downloaded to your browser
