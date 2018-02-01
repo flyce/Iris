@@ -3,9 +3,12 @@ Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见[Echo's B
 
 ## 如何使用
 ### chrome浏览器 
-```
-git clone https://github.com/flyce/Iris.git
-```
+点击右侧的`clone or download`
+
+选择`download zip`
+
+下载并解压
+
 打开浏览器，地址栏输入: `chrome://extensions/`
 
 启用开发者模式，加载已解压的扩展程序，选择git的文件夹
