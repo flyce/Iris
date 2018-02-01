@@ -2,7 +2,8 @@ var category  = ['新闻', '公司文件', '集团文件', '局方文件', '通�
 
 // 监听start button 点击事件
 document.getElementById('iris').onclick = function() {
-	document.getElementById('progress').innerHTML = "正在获取用户信息...";
+    document.getElementById("dataTable").style.visibility = "visible";
+    document.getElementById("dataTable").style.display = '';
     fetchData('https://oa.rlair.net/oa/cms/index', handleLogin);
 };
 
@@ -17,9 +18,13 @@ document.getElementById('iris').onclick = function() {
 function handleLogin(loginData) {
     var username = loginData.match(/[\u4e00-\u9fa5]{2,}-[\u4e00-\u9fa5]{2,}-[\u4e00-\u9fa5]{2,}-[\u4e00-\u9fa5]{2,}/);
     if (username != null) {
-        render(username[0], 'class', 'fault');
+        // render(username[0], 'class', 'fault');
+        document.getElementById("tableHead").style.visibility = 'visible';
+        document.getElementById("tableBody").style.visibility = 'visible';
+        document.getElementById("tableHead").style.display = '';
+        document.getElementById("tableBody").style.display = '';
+        document.getElementById('userInfo').innerHTML = username[0];
         console.log(username[0]);
-        render("开始抓取新闻...");
         var pageSize = document.getElementById('newsNumber').value;
         pageSize = pageSize == '' ? 15 : pageSize;
         for (var i = 1; i < 8; ++i) {
@@ -28,8 +33,7 @@ function handleLogin(loginData) {
         }
 
     } else {
-        render("获取失败!!!", 'class', 'fault');
-        render("请先登录OA.");
+        document.getElementById('userInfo').innerHTML = "请登陆后重试！";
     }
 }
 
@@ -42,12 +46,12 @@ function handleLogin(loginData) {
  * @param value
  */
 function render(msg, key, value) {
-    var div = document.createElement("div");
+    var div = document.createElement("tr");
     div.innerHTML = msg;
     if(key && value) {
         div.setAttribute(key, value);
     }
-    document.getElementById('progress').appendChild(div);
+    document.getElementById('tableBody').appendChild(div);
 }
 
 /***
@@ -56,19 +60,19 @@ function render(msg, key, value) {
  * @param index
  */
 function showResult(result, index) {
-    render('正在抓取<strong>' + category[index-1] + '</strong>类：', 'class', 'fault');
+    render('<th>'+ category[index-1] + '</th><th>开始</th>', 'class', "success");
     console.log(category[index-1]);
     result = JSON.parse(result); // text to json
 	var arr = result.rows;
 	arr.forEach(function(item, index){
 	    var newsTitle = item.abstracttext == null ? item.subject : item.abstracttext;
-		render('<a href="https://oa.rlair.net/oa/cms/queryOnePage?id=' +
-        item.id + '" target="_blank">' + newsTitle + '</a>', 'id', item.id);
+	    newsTitle = newsTitle.length > 35 ? newsTitle.substr(0, 35) + '...' : newsTitle;
+        render('<td><a href="https://oa.rlair.net/oa/cms/queryOnePage?id=' + item.id + '" target="_blank">' + newsTitle +
+            '</a></td><th scope="row"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></th>', 'id', item.id);
 		fetchData("https://oa.rlair.net/oa/cms/queryOnePage?id=" + item.id, Echo);
 		console.log(newsTitle);
 	});
-
-	render('<strong>' + category[index-1] + '</strong>类抓取结束！<br />', 'class', 'success');
+    render('<th>'+ category[index-1] + '</th><th>结束</th>', 'class', "warning");
 }
 
 /***
@@ -82,12 +86,11 @@ function showResult(result, index) {
 function Echo(result, index, url) {
     var newsTitle = result.match(/<title>.{2,}<\/title>/);
     if (newsTitle[0].length > 15) {
-        var span = document.createElement("span");
-        span.innerHTML = '\t阅读完成！';
         // 3b39c66bb31c43228d614f392a6f530a \w
         // 3123 \d
         // 文章的id分为两类 一类是md5 另一类是四位数字
-        document.getElementById(url.match(/[\w]{32}/) || url.match(/[\d]{4}/)).appendChild(span);
+        document.getElementById(url.match(/[\w]{32}/) || url.match(/[\d]{4}/))
+            .lastChild.firstChild.setAttribute('class', 'glyphicon glyphicon-ok');
     }
 }
 

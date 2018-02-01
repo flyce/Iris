@@ -1,16 +1,22 @@
 # 鸢尾
 Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见[Echo's Blog](https://www.flyce.cn/Iris.html)
 
-## how to use
-### For chrome 
+## 如何使用
+### chrome浏览器 
 ```
 git clone https://github.com/flyce/Iris.git
 ```
-Open your browser, enter `chrome://extensions/` in the address bar 
+打开浏览器，地址栏输入: `chrome://extensions/`
 
-Enable developer mode, load the unzipped extension, select the folder you just downloaded
+启用开发者模式，加载已解压的扩展程序，选择git的文件夹
+### 其他浏览器
+[点击这里](https://github.com/flyce/Iris/raw/master/Iris.crx) 下载Iris.crx文件
 
-### For other browser
-[click here](https://github.com/flyce/Iris/raw/master/Iris.crx) download Iris.crx
+拖动你下载的文件到浏览器打开，添加插件即可
 
-Drag the file you just downloaded to your browser
+## 更新日志
+2018.2.1
+重构UI，引入bootstrap开发界面
+
+2017.12.11
+功能开发完成，UI待改进
