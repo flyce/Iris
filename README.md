@@ -23,6 +23,23 @@ Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见下文或
 添加完成后会在浏览器右侧多出一个
 ![Iris](https://github.com/flyce/Iris/blob/master/Iris.png)图标，点击图标，输入想读取的公文数，点击开始，等待刷新符号变成对号即可。
 
+本文以qq浏览器作为示范进行安装，其他浏览器大同小异。
+
+1. 下载上述的Iris.crx文件。
+2. 打开浏览器扩展程序。
+![Iris](https://github.com/flyce/Iris/blob/master/WechatIMG57.jpeg)
+3. 将下载的crx文件拖到下图中。
+![Iris](https://github.com/flyce/Iris/blob/master/2.png)
+4. 确认添加。
+![Iris](https://github.com/flyce/Iris/blob/master/3.png)
+5. 应该在浏览器右上看到如下图。
+![Iris](https://github.com/flyce/Iris/blob/master/4.png)
+6. 点击该图标。
+![Iris](https://github.com/flyce/Iris/blob/master/5.png)
+7. 输入你想读取的公文条数。
+![Iris](https://github.com/flyce/Iris/blob/master/6.png)
+
+
 ## 注意事项
 公司每个月的公文基本不超250个，也就意味着每周仅需输入数字70，**禁止输入超过300的数字，避免给自己带来不必要的麻烦**
 
