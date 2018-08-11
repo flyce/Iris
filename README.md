@@ -34,9 +34,9 @@ Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见下文或
 ![Iris](https://github.com/flyce/Iris/blob/master/3.png)
 5. 应该在浏览器右上看到如下图。
 ![Iris](https://github.com/flyce/Iris/blob/master/4.png)
-6. 点击该图标。
+6. 点击该图标，输入你想读取的公文条数，点击开始。
 ![Iris](https://github.com/flyce/Iris/blob/master/5.png)
-7. 输入你想读取的公文条数。
+7. 等待几秒，当刷新符号变为对勾时，说明当前条目公文已被读取。
 ![Iris](https://github.com/flyce/Iris/blob/master/6.png)
 
 
