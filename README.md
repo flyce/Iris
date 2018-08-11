@@ -1,5 +1,5 @@
 # 鸢尾
-Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见[Echo's Blog](https://www.flyce.cn/Iris.html)
+Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见下文或[Echo's Blog](https://www.flyce.cn/Iris.html)
 
 ## 如何使用
 ### 不支持IE Firefox Edge Safari浏览器，仅支持chromium内核的浏览器
