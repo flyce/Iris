@@ -7,11 +7,9 @@ Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见下文或
 
 （不建议用Chrome浏览器使用此程序，因程序未在谷歌商店发布，使用此扩展后打开浏览器时会提醒停用，取消就好，如果点击停用会导致本程序不可使用）
 
-点击右侧的`clone or download`
+[点击这里](https://store.flyce.cn/Iris.zip) 下载Iris.zip文件
 
-选择`download zip`
-
-下载并解压
+解压
 
 打开浏览器，地址栏输入: `chrome://extensions/`
 
@@ -50,6 +48,9 @@ Ruili Airlines OA公文一键点击的浏览器扩展，使用说明见下文或
 无需各个类别重复输入，仅需点击一次即可。
 
 ## 更新日志
+2018.10.9
+解决Chrome新版本的跨域限制，新增版本更新提示功能
+
 2018.2.1
 重构UI，引入bootstrap开发界面
 
