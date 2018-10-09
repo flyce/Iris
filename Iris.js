@@ -2,10 +2,30 @@ var category  = ['新闻', '公司文件', '集团文件', '局方文件', '通�
 
 // 监听start button 点击事件
 document.getElementById('iris').onclick = function() {
-    document.getElementById("dataTable").style.visibility = "visible";
-    document.getElementById("dataTable").style.display = '';
-    fetchData('https://oa.rlair.net/oa/cms/index', handleLogin);
+    versionCheck().then(res => {
+        if(res.version === "0.2.2") {
+            document.getElementById("dataTable").style.visibility = "visible";
+            document.getElementById("dataTable").style.display = '';
+            fetchData('https://oa.rlair.net/oa/cms/index', handleLogin);
+        } else {
+            document.getElementById("versionCheck").style.visibility = "visible";
+            document.getElementById("versionCheck").style.display = '';
+            document.getElementById('version').innerHTML = res.version;
+        }
+    });
 };
+
+/***
+ * 版本校验
+ */
+function versionCheck() {
+    const result = fetch("https://store.flyce.cn/Iris/version.json", {
+        method: "GET"
+    }).then(function (response) {
+        return response.json();
+    });
+    return result;
+}
 
 /***
  * 登陆验证
