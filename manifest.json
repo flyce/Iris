@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "鸢尾",
+  "name": "Iris",
   "description": "鸢尾计划，帮你快速点击N条OA公文！",
   "version": "0.2.2",
   "author": "Echo",
@@ -17,6 +17,7 @@
     "default_popup": "iris.html",
     "default_title": "鸢尾⚜️"
   },
+  "options_page": "iris.html",
 
   "permissions": [
     "https://*.rlair.net/"

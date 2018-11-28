@@ -6,7 +6,7 @@ document.getElementById('iris').onclick = function() {
         if(res.version === "0.2.2") {
             document.getElementById("dataTable").style.visibility = "visible";
             document.getElementById("dataTable").style.display = '';
-            fetchData('https://oa.rlair.net/oa/cms/index', handleLogin);
+            // fetchData('https://oa.rlair.net/oa/cms/index', handleLogin);
         } else {
             document.getElementById("versionCheck").style.visibility = "visible";
             document.getElementById("versionCheck").style.display = '';
