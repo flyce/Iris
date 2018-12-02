@@ -3,8 +3,8 @@
 
   "name": "Iris",
   "description": "鸢尾计划，帮你快速点击N条OA公文！",
-  "version": "0.2.2",
-  "author": "Echo",
+  "version": "0.3.0",
+  "author": "Paco",
   "homepage_url": "https://www.flyce.cn/",
   "icons": {
       "16": "Iris.png",             
